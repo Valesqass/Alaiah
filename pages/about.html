@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>À propos - Alaïa - Maison310</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:wght@700;900&family=Staatliches&family=Gideon+Roman:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .animate-fadeInLeft {
+            animation: fadeInLeft 0.8s ease-out;
+        }
+
+        .animate-fadeInRight {
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-600 {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen text-gray-800 bg-black">
+    <!-- HEADER -->
+    <header class="relative w-full h-screen overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="../assets/img/7.png" alt="" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-60"></div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="absolute top-0 left-0 right-0 z-30 flex justify-between items-center p-4 md:p-6">
+            <div
+                class="text-white text-xl md:text-2xl lg:text-3xl font-bold uppercase font-gideon transition-all duration-300 hover:text-red-900">
+                <a href="../index.html">MAISON310.</a>
+            </div>
+            <div class="hidden md:flex space-x-4 lg:space-x-8 text-white font-bold uppercase tracking-wider">
+                <a href="../index.html"
+                    class="text-lg lg:text-2xl transition-all duration-300 hover:text-red-900 hover:scale-105">Accueil</a>
+                <a href="../index.html#main-content"
+                    class="text-lg lg:text-2xl transition-all duration-300 hover:text-red-900 hover:scale-105">Découvrir</a>
+                <a href="about.html"
+                    class="text-lg lg:text-2xl transition-all duration-300 hover:text-red-900 text-red-900 scale-105">À
+                    propos</a>
+                <a href="../index.html#footer"
+                    class="text-lg lg:text-2xl transition-all duration-300 hover:text-red-900 hover:scale-105">Contact</a>
+            </div>
+
+            <button class="menu-toggle md:hidden transition-transform duration-300 hover:scale-110" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu">
+            <a href="../index.html" class="hover:text-red-900 transition-all duration-300">Accueil</a>
+            <a href="../index.html#main-content" class="hover:text-red-900 transition-all duration-300">Découvrir</a>
+            <a href="about.html" class="hover:text-red-900 text-red-900 transition-all duration-300">À propos</a>
+            <a href="../index.html#footer" class="hover:text-red-900 transition-all duration-300">Contact</a>
+            <div class="mb-12">
+                <img src="../assets/img/310.png" alt="310" class="h-16 md:h-20 w-auto animate-pulse-slow">
+            </div>
+        </div>
+
+        <!-- Titre centré -->
+        <div class="absolute inset-0 flex items-center justify-center z-20">
+            <div class="text-center text-white animate-fadeInUp">
+                <h1 class="font-gideon text-4xl md:text-6xl lg:text-8xl font-bold mb-4 tracking-wider uppercase">
+                    À propos
+                </h1>
+                <p class="text-xl md:text-2xl lg:text-3xl font-light tracking-wide animate-fadeInUp delay-200">
+                    Découvrez l'univers Maison310.
+                </p>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="bg-black text-white">
+        <!-- Section Histoire -->
+        <section class="py-16 md:py-24 px-4 bg-white">
+            <div class="max-w-4xl mx-auto text-center animate-fadeInUp">
+                <img src="../assets/img/310.png" alt="Maison310"
+                    class="h-20 md:h-24 mx-auto mb-8 transition-transform duration-500 hover:scale-110 animate-pulse-slow">
+                <p
+                    class="text-lg md:text-xl leading-relaxed text-red-900 max-w-3xl mx-auto transition-colors duration-300">
+                    Chez Maison 310, on voit chaque projet comme un terrain de jeu multiple.
+                    <br>
+                    <br>
+                    Un son peut devenir une image. Une image, un vêtement. Un ressenti, une narration.
+                    <br>
+                    On ne s’impose pas de cadre : on explore, on assemble, on donne forme à des idées en les rendant
+                    concrètes et accessibles à tous.
+                    <br>
+                    <br>
+                    <span class="hidden md:inline">
+                        Maison 310, c'est un espace ouvert à tous les créateurs.
+                        Musique, vidéo, dessin, photographie, mode, graphisme, beatmaking… Peu importe le domaine, du
+                        moment
+                        que ça crée.
+                        <br>
+                        <br>
+                        On ne promet pas la lumière, mais on crée un terrain.
+                        À chacun d'y poser ses idées, ses images, sa vision.
+                        <br>
+                        <br>
+                    </span>
+
+                    Alaïa n’est que le début.
+                    <br>
+                    La suite se construit avec celles et ceux qui veulent faire, pas juste regarder.
+                </p>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Section Biographie -->
+        <section class="py-16 md:py-24 px-4 bg-gradient-to-br from-black via-red-900 to-black">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="animate-fadeInLeft">
+                        <img src="../assets/img/cover.jpg" alt="Alaïa"
+                            class="w-full rounded-3xl shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-red-900/20">
+                    </div>
+                    <div class="animate-fadeInRight">
+                        <h2
+                            class="font-gideon text-3xl md:text-4xl font-bold mb-6 text-white transition-colors duration-300 hover:text-red-800">
+                            Alaïa
+                        </h2>
+                        <p
+                            class="text-lg md:text-xl leading-relaxed mb-6 text-gray-300 transition-colors duration-300 hover:text-gray-200">
+                            Artiste émergente de la scène française, Alaïa incarne une nouvelle génération de créateurs
+                            qui repoussent les limites de l'expression musicale. Son univers unique mélange influences
+                            contemporaines et sonorités authentiques.
+                        </p>
+                        <p
+                            class="text-lg md:text-xl leading-relaxed text-gray-300 transition-colors duration-300 hover:text-gray-200">
+                            Portée par Maison310, elle développe un style distinctif qui résonne avec une audience
+                            en quête d'authenticité et d'innovation artistique.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <footer id="" class="bg-black py-6 md:py-8 text-center">
+        <div class="text-white text-sm md:text-base">© Maison310 2025</div>
+        <div class="my-4 space-x-4 md:space-x-6">
+            <a href="https://www.instagram.com/maison.310/" target="_blank"
+                class="text-white hover:text-red-900 transition-colors text-sm md:text-base">Instagram</a>
+            <a href="https://tiktok.com" target="_blank"
+                class="text-white hover:text-red-900 transition-colors text-sm md:text-base">TikTok</a>
+            <a href="https://www.youtube.com/@Hermanitoalaprod" target="_blank"
+                class="text-white hover:text-red-900 transition-colors text-sm md:text-base">YouTube</a>
+        </div>
+        <div class="mt-4">
+            <img src="../assets/img/310.png" alt="Logo Maison310" class="h-6 md:h-8 inline-block">
+
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

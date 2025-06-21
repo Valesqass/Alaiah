@@ -105,3 +105,50 @@ carousel.addEventListener('touchend', (e) => {
 setInterval(nextSlide, 5000);
 
 updateCarousel();
+
+
+// Fonctions pour le modal des plateformes musicales
+function openMusicModal() {
+    const modal = document.getElementById('musicModal');
+    const modalContent = document.getElementById('modalContent');
+
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+
+    // Animation d'ouverture
+    setTimeout(() => {
+        modalContent.classList.remove('scale-95', 'opacity-0');
+        modalContent.classList.add('scale-100', 'opacity-100');
+    }, 10);
+}
+
+function closeMusicModal() {
+    const modal = document.getElementById('musicModal');
+    const modalContent = document.getElementById('modalContent');
+
+    // Animation de fermeture
+    modalContent.classList.remove('scale-100', 'opacity-100');
+    modalContent.classList.add('scale-95', 'opacity-0');
+
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }, 300);
+}
+
+// Fermer le modal en cliquant à l'extérieur
+document.getElementById('musicModal').addEventListener('click', function (e) {
+    if (e.target === this) {
+        closeMusicModal();
+    }
+});
+
+// Fermer le modal avec la touche Échap
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('musicModal');
+        if (!modal.classList.contains('hidden')) {
+            closeMusicModal();
+        }
+    }
+});
