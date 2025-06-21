@@ -94,15 +94,13 @@
 </head>
 
 <body class="min-h-screen text-gray-800 bg-black">
-    <!-- HEADER -->
-    <header class="relative w-full h-screen overflow-hidden">
+    <header id="header" class="relative w-full h-screen overflow-hidden">
         <div class="absolute inset-0">
             <img src="../assets/img/7.png" alt="" class="w-full h-full object-cover object-center" />
             <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-60"></div>
         </div>
 
-        <!-- NAVIGATION -->
-        <nav class="absolute top-0 left-0 right-0 z-30 flex justify-between items-center p-4 md:p-6">
+        <nav id="navbar" class="absolute top-0 left-0 right-0 z-30 flex justify-between items-center p-4 md:p-6">
             <div
                 class="text-white text-xl md:text-2xl lg:text-3xl font-bold uppercase font-gideon transition-all duration-300 hover:text-red-900">
                 <a href="../index.html">MAISON310.</a>
@@ -126,8 +124,7 @@
             </button>
         </nav>
 
-        <!-- Mobile menu -->
-        <div class="mobile-menu">
+        <div id="mobile-menu" class="mobile-menu">
             <a href="../index.html" class="hover:text-red-900 transition-all duration-300">Accueil</a>
             <a href="../index.html#main-content" class="hover:text-red-900 transition-all duration-300">Découvrir</a>
             <a href="about.html" class="hover:text-red-900 text-red-900 transition-all duration-300">À propos</a>
@@ -137,8 +134,7 @@
             </div>
         </div>
 
-        <!-- Titre centré -->
-        <div class="absolute inset-0 flex items-center justify-center z-20">
+        <div id="hero-title" class="absolute inset-0 flex items-center justify-center z-20">
             <div class="text-center text-white animate-fadeInUp">
                 <h1 class="font-gideon text-4xl md:text-6xl lg:text-8xl font-bold mb-4 tracking-wider uppercase">
                     À propos
@@ -150,12 +146,8 @@
         </div>
     </header>
 
-
-
-    <!-- CONTENU PRINCIPAL -->
-    <main class="bg-black text-white">
-        <!-- Section Histoire -->
-        <section class="py-16 md:py-24 px-4 bg-white">
+    <main id="main-content" class="bg-black text-white">
+        <section id="histoire" class="py-16 md:py-24 px-4 bg-white">
             <div class="max-w-4xl mx-auto text-center animate-fadeInUp">
                 <img src="../assets/img/310.png" alt="Maison310"
                     class="h-20 md:h-24 mx-auto mb-8 transition-transform duration-500 hover:scale-110 animate-pulse-slow">
@@ -166,7 +158,7 @@
                     <br>
                     Un son peut devenir une image. Une image, un vêtement. Un ressenti, une narration.
                     <br>
-                    On ne s’impose pas de cadre : on explore, on assemble, on donne forme à des idées en les rendant
+                    On ne s'impose pas de cadre : on explore, on assemble, on donne forme à des idées en les rendant
                     concrètes et accessibles à tous.
                     <br>
                     <br>
@@ -183,19 +175,14 @@
                         <br>
                     </span>
 
-                    Alaïa n’est que le début.
+                    Alaïa n'est que le début.
                     <br>
                     La suite se construit avec celles et ceux qui veulent faire, pas juste regarder.
                 </p>
             </div>
         </section>
 
-
-
-
-
-        <!-- Section Biographie -->
-        <section class="py-16 md:py-24 px-4 bg-gradient-to-br from-black via-red-900 to-black">
+        <section id="biographie" class="py-16 md:py-24 px-4 bg-gradient-to-br from-black via-red-900 to-black">
             <div class="max-w-4xl mx-auto">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="animate-fadeInLeft">
@@ -222,12 +209,9 @@
                 </div>
             </div>
         </section>
-
-
     </main>
 
-
-    <footer id="" class="bg-black py-6 md:py-8 text-center">
+    <footer id="footer" class="bg-black py-6 md:py-8 text-center">
         <div class="text-white text-sm md:text-base">© Maison310 2025</div>
         <div class="my-4 space-x-4 md:space-x-6">
             <a href="https://www.instagram.com/maison.310/" target="_blank"
@@ -239,7 +223,6 @@
         </div>
         <div class="mt-4">
             <img src="../assets/img/310.png" alt="Logo Maison310" class="h-6 md:h-8 inline-block">
-
         </div>
     </footer>
 
