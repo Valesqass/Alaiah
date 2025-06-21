@@ -17,7 +17,8 @@
 </head>
 
 <body class="min-h-screen text-gray-800 bg-white">
-    <!-- HEADER -->
+
+
     <header class="relative w-full min-h-screen overflow-hidden">
         <div class="absolute inset-0">
             <img src="/assets/img/pgpink.png" alt="" class="hidden lg:block w-full h-full object-cover object-center" />
@@ -27,7 +28,6 @@
             <div class="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
 
-        <!-- NAVIGATION -->
         <nav class="absolute top-0 left-0 right-0 z-30 flex justify-between items-center p-4 md:p-6">
             <div
                 class="text-white text-xl md:text-2xl lg:text-3xl font-bold uppercase font-gideon transition-all duration-300 hover:text-red-900">
@@ -42,7 +42,6 @@
                 <a href="#footer" class="text-lg lg:text-2xl transition-colors hover:text-red-900">Contact</a>
             </div>
 
-
             <button class="menu-toggle md:hidden" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -50,8 +49,6 @@
             </button>
         </nav>
 
-
-        <!-- Mobile menu -->
         <div class="mobile-menu">
             <a href="#hero" class="hover:text-red-900">Accueil</a>
             <a href="#main-content" class="hover:text-red-900 scroll-smooth">Découvrir</a>
@@ -79,6 +76,9 @@
         </div>
     </header>
 
+
+
+
     <main id="main-content" class="relative">
         <section id="alaia-presentation"
             class="bg-cover bg-center min-h-screen flex flex-col justify-center items-center px-4 py-8">
@@ -87,10 +87,8 @@
 
                 <div class="block lg:hidden">
                     <div class="relative overflow-hidden rounded-3xl">
-                        <!-- Carousel -->
                         <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
 
-                            <!-- Slide 1 -->
                             <div class="w-full flex-shrink-0 px-4">
                                 <div class="block relative group cursor-pointer" onclick="openMusicModal()">
                                     <div class="w-full h-64 sm:h-80 md:h-96 bg-cover bg-center rounded-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 hover:shadow-2xl cursor-pointer"
@@ -108,7 +106,6 @@
                                     style="font-family: 'Poppins', sans-serif; font-weight: 600;">Ça s'écoute...</p>
                             </div>
 
-                            <!-- Slide 2 -->
                             <div class="w-full flex-shrink-0 px-4">
                                 <a href="https://votre-lien-2.com" target="_blank" class="block relative group">
                                     <div
@@ -126,7 +123,6 @@
                                     style="font-family: 'Poppins', sans-serif; font-weight: 600;">Ça se regarde...</p>
                             </div>
 
-                            <!-- Slide 3 -->
                             <div class="w-full flex-shrink-0 px-4">
                                 <a href="https://votre-lien-3.com" target="_blank" class="block relative group">
                                     <div
@@ -144,7 +140,6 @@
                                     style="font-family: 'Poppins', sans-serif; font-weight: 600;">Ça se porte...</p>
                             </div>
                         </div>
-
 
                         <button id="prevBtn"
                             class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-40 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm">
@@ -175,11 +170,8 @@
                     </div>
                 </div>
 
-
-
                 <div class="hidden lg:flex lg:gap-16 xl:gap-32">
 
-                    <!-- Première carte -->
                     <div class="flex-1">
                         <div class="block relative group cursor-pointer" onclick="openMusicModal()">
                             <div class="w-full h-96 bg-cover bg-center rounded-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 hover:shadow-2xl hover:animate-bounce cursor-pointer"
@@ -197,7 +189,6 @@
                             style="font-family: 'Poppins', sans-serif; font-weight: 600;">Ça s'écoute...</p>
                     </div>
 
-                    <!-- Deuxième carte -->
                     <div class="flex-1">
                         <a href="https://votre-lien-2.com" target="_blank" class="block relative group">
                             <div
@@ -215,7 +206,6 @@
                             style="font-family: 'Poppins', sans-serif; font-weight: 600;">Ça se regarde...</p>
                     </div>
 
-                    <!-- Troisième carte -->
                     <div class="flex-1">
                         <a href="https://votre-lien-3.com" target="_blank" class="block relative group">
                             <div
@@ -237,8 +227,7 @@
         </section>
     </main>
 
-
-    <footer id="" class="bg-black py-6 md:py-8 text-center">
+    <footer id="footer" class="bg-black py-6 md:py-8 text-center">
         <div class="text-white text-sm md:text-base">© Maison310 2025</div>
         <div class="my-4 space-x-4 md:space-x-6">
             <a href="https://www.instagram.com/maison.310/" target="_blank"
@@ -253,7 +242,6 @@
         </div>
     </footer>
 
-    <!-- Modal pour les plateformes de musique -->
     <div id="musicModal"
         class="fixed inset-0 bg-black bg-opacity-75 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-red-900 rounded-3xl p-8 max-w-md w-full mx-4 transform transition-all duration-300 scale-95 opacity-0"
@@ -263,21 +251,18 @@
                 <p class="text-gray-200 mb-6">Choisissez votre plateforme préférée</p>
 
                 <div class="space-y-4">
-                    <!-- Spotify -->
                     <a href="https://open.spotify.com/artist/VOTRE_ID_SPOTIFY" target="_blank"
                         class="flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105">
                         <i class="fab fa-spotify text-xl mr-3"></i>
                         Spotify
                     </a>
 
-                    <!-- Apple Music -->
                     <a href="https://music.apple.com/artist/VOTRE_ID_APPLE_MUSIC" target="_blank"
                         class="flex items-center justify-center w-full bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105">
                         <i class="fab fa-apple text-xl mr-3"></i>
                         Apple Music
                     </a>
 
-                    <!-- Deezer -->
                     <a href="https://www.deezer.com/fr/album/761201231" target="_blank"
                         class="flex items-center justify-center w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105">
                         <i class="fab fa-deezer text-xl mr-3"></i>
@@ -292,8 +277,6 @@
             </div>
         </div>
     </div>
-
-
 
     <script src="assets/js/script.js"></script>
 </body>
