@@ -29,13 +29,16 @@
 
         <!-- NAVIGATION -->
         <nav class="absolute top-0 left-0 right-0 z-30 flex justify-between items-center p-4 md:p-6">
-            <div class="text-white text-xl md:text-2xl lg:text-3xl font-bold uppercase font-gideon">MAISON310.</div>
+            <div
+                class="text-white text-xl md:text-2xl lg:text-3xl font-bold uppercase font-gideon transition-all duration-300 hover:text-red-900">
+                <a href="../index.html">MAISON310.</a>
+            </div>
             <div class="absolute left-1/2 transform -translate-x-1/2">
             </div>
             <div class="hidden md:flex space-x-4 lg:space-x-8 text-white font-bold uppercase tracking-wider">
                 <a href="#hero" class="text-lg lg:text-2xl transition-colors hover:text-red-900">Accueil</a>
                 <a href="#main-content" class="text-lg lg:text-2xl transition-colors hover:text-red-900">Découvrir</a>
-                <a href="#footer" class="text-lg lg:text-2xl transition-colors hover:text-red-900">A propos</a>
+                <a href="pages/about.html" class="text-lg lg:text-2xl transition-colors hover:text-red-900">A propos</a>
                 <a href="#footer" class="text-lg lg:text-2xl transition-colors hover:text-red-900">Contact</a>
             </div>
 
@@ -52,7 +55,7 @@
         <div class="mobile-menu">
             <a href="#hero" class="hover:text-red-900">Accueil</a>
             <a href="#main-content" class="hover:text-red-900 scroll-smooth">Découvrir</a>
-            <a href="#footer" class="hover:text-red-900">A propos</a>
+            <a href="pages/about.html" class="hover:text-red-900">A propos</a>
             <a href="#footer" class="hover:text-red-900">Contact</a>
             <div class="mb-12">
                 <img src="/assets/img/310.png" alt="310" class="h-16 md:h-20 w-auto">
@@ -89,7 +92,7 @@
 
                             <!-- Slide 1 -->
                             <div class="w-full flex-shrink-0 px-4">
-                                <a href="https://votre-lien-ici.com" target="_blank" class="block relative group">
+                                <div class="block relative group cursor-pointer" onclick="openMusicModal()">
                                     <div class="w-full h-64 sm:h-80 md:h-96 bg-cover bg-center rounded-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 hover:shadow-2xl cursor-pointer"
                                         style="background-image: url('/assets/img/cover.jpg');">
                                         <div
@@ -100,7 +103,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                                 <p class="text-white text-center mt-4 text-lg uppercase"
                                     style="font-family: 'Poppins', sans-serif; font-weight: 600;">Ça s'écoute...</p>
                             </div>
@@ -178,7 +181,7 @@
 
                     <!-- Première carte -->
                     <div class="flex-1">
-                        <a href="https://votre-lien-ici.com" target="_blank" class="block relative group">
+                        <div class="block relative group cursor-pointer" onclick="openMusicModal()">
                             <div class="w-full h-96 bg-cover bg-center rounded-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 hover:shadow-2xl hover:animate-bounce cursor-pointer"
                                 style="background-image: url('/assets/img/cover.jpg');">
                                 <div
@@ -189,7 +192,7 @@
                                     </span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                         <p class="text-white text-center mt-4 text-lg uppercase"
                             style="font-family: 'Poppins', sans-serif; font-weight: 600;">Ça s'écoute...</p>
                     </div>
@@ -236,19 +239,61 @@
 
 
     <footer id="" class="bg-black py-6 md:py-8 text-center">
-        <div class="text-gray-600 text-sm md:text-base">© Maison310 2025</div>
+        <div class="text-white text-sm md:text-base">© Maison310 2025</div>
         <div class="my-4 space-x-4 md:space-x-6">
             <a href="https://www.instagram.com/maison.310/" target="_blank"
-                class="text-gray-600 hover:text-red-900 transition-colors text-sm md:text-base">Instagram</a>
+                class="text-white hover:text-red-900 transition-colors text-sm md:text-base">Instagram</a>
             <a href="https://tiktok.com" target="_blank"
-                class="text-gray-600 hover:text-red-900 transition-colors text-sm md:text-base">TikTok</a>
+                class="text-white hover:text-red-900 transition-colors text-sm md:text-base">TikTok</a>
             <a href="https://www.youtube.com/@Hermanitoalaprod" target="_blank"
-                class="text-gray-600 hover:text-red-900 transition-colors text-sm md:text-base">YouTube</a>
+                class="text-white hover:text-red-900 transition-colors text-sm md:text-base">YouTube</a>
         </div>
         <div class="mt-4">
             <img src="assets/img/310.png" alt="Logo Maison310" class="h-6 md:h-8 inline-block">
         </div>
     </footer>
+
+    <!-- Modal pour les plateformes de musique -->
+    <div id="musicModal"
+        class="fixed inset-0 bg-black bg-opacity-75 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-red-900 rounded-3xl p-8 max-w-md w-full mx-4 transform transition-all duration-300 scale-95 opacity-0"
+            id="modalContent">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold text-white mb-2">Écouter la mixtape</h3>
+                <p class="text-gray-200 mb-6">Choisissez votre plateforme préférée</p>
+
+                <div class="space-y-4">
+                    <!-- Spotify -->
+                    <a href="https://open.spotify.com/artist/VOTRE_ID_SPOTIFY" target="_blank"
+                        class="flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105">
+                        <i class="fab fa-spotify text-xl mr-3"></i>
+                        Spotify
+                    </a>
+
+                    <!-- Apple Music -->
+                    <a href="https://music.apple.com/artist/VOTRE_ID_APPLE_MUSIC" target="_blank"
+                        class="flex items-center justify-center w-full bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105">
+                        <i class="fab fa-apple text-xl mr-3"></i>
+                        Apple Music
+                    </a>
+
+                    <!-- Deezer -->
+                    <a href="https://www.deezer.com/fr/album/761201231" target="_blank"
+                        class="flex items-center justify-center w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105">
+                        <i class="fab fa-deezer text-xl mr-3"></i>
+                        Deezer
+                    </a>
+                </div>
+
+                <button onclick="closeMusicModal()"
+                    class="mt-6 text-gray-500 hover:text-white font-medium transition-colors duration-300">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="assets/js/script.js"></script>
 </body>
