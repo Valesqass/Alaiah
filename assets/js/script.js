@@ -152,3 +152,39 @@ document.addEventListener('keydown', function (e) {
         }
     }
 });
+
+
+function openModal(src, type) {
+    const modal = document.getElementById('imageModal');
+    const modalContent = document.getElementById('modalContent');
+
+    if (type === 'image') {
+        modalContent.innerHTML = `<img src="${src}" alt="Merch Image">`;
+    } else if (type === 'video') {
+        modalContent.innerHTML = `<video controls autoplay style="width: 100%; height: auto;"><source src="${src}" type="video/mp4"></video>`;
+    }
+
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Fermer le modal en cliquant à l'extérieur
+window.onclick = function (event) {
+    const modal = document.getElementById('imageModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+
+// Fermer avec Escape
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});

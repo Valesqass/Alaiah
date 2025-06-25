@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merch Maison310</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Urbanist:wght@700;900&family=Staatliches&family=Gideon+Roman:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body class="bg-black text-white">
+    <nav class="absolute top-0 left-0 right-0 z-30 flex justify-between items-center p-4 md:p-6">
+        <div
+            class="text-white text-xl md:text-2xl lg:text-3xl font-bold uppercase font-gideon transition-all duration-300 hover:text-red-900">
+            <a href="../index.html">MAISON310.</a>
+        </div>
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+        </div>
+        <div class="hidden md:flex space-x-4 lg:space-x-8 text-white font-bold uppercase tracking-wider">
+            <a href="#hero" class="text-lg lg:text-2xl transition-colors hover:text-red-900">Accueil</a>
+            <a href="#main-content" class="text-lg lg:text-2xl transition-colors hover:text-red-900">Découvrir</a>
+            <a href="pages/about.html" class="text-lg lg:text-2xl transition-colors hover:text-red-900">A propos</a>
+            <a href="#footer" class="text-lg lg:text-2xl transition-colors hover:text-red-900">Contact</a>
+        </div>
+
+        <button class="menu-toggle md:hidden" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <main class="flex flex-col items-center justify-center min-h-screen px-8 mt-24 md:mt-32 relative">
+        <div class="floating-elements">
+            <div class="floating-dot" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+            <div class="floating-dot" style="top: 60%; left: 85%; animation-delay: 2s;"></div>
+            <div class="floating-dot" style="top: 80%; left: 15%; animation-delay: 4s;"></div>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-bold text-center text-red-900 mb-4 z-10 relative font-gideon">MAISON310
+            MERCH</h1>
+        <p class="text-xl text-gray-300 text-center mb-16 max-w-2xl z-10 relative font-poppins">
+            L'art d'Alaïa se porte. Chaque pièce raconte son histoire,
+            chaque détail exprime sa vision.
+        </p>
+
+        <div class="hero-grid w-full">
+            <div class="gallery-item item-1" onclick="openModal('../assets/img/minia.jpg', 'image')">
+                <img src="../assets/img/minia.jpg" alt="Minia">
+                <div class="overlay">
+                    <span>Voir Plus</span>
+                </div>
+            </div>
+
+            <div class="gallery-item item-2" onclick="openModal('../assets/video/reels_merch.mp4', 'video')">
+                <video autoplay muted loop playsinline>
+                    <source src="../assets/video/reels_merch.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <span>▶ Regarder</span>
+                </div>
+            </div>
+
+            <div class="gallery-item item-3" onclick="openModal('../assets/img/merch1.jpg', 'image')">
+                <img src="../assets/img/merch1.jpg" alt="Merch1">
+                <div class="overlay">
+                    <span>Découvrir</span>
+                </div>
+            </div>
+
+            <div class="gallery-item item-4" onclick="openModal('../assets/img/merch2.jpg', 'image')">
+                <img src="../assets/img/merch2.jpg" alt="Merch2">
+                <div class="overlay">
+                    <span>Explorer</span>
+                </div>
+            </div>
+
+            <div class="gallery-item item-5" onclick="openModal('../assets/img/merch3.jpg', 'image')">
+                <img src="../assets/img/merch3.jpg" alt="Merch3">
+                <div class="overlay">
+                    <span>Admirer</span>
+                </div>
+            </div>
+
+            <div class="gallery-item item-6" onclick="openModal('../assets/img/minia.jpg', 'image')">
+                <img src="../assets/img/minia.jpg" alt="Minia Collection">
+                <div class="overlay">
+                    <span>Collection</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content" id="modalContent">
+        </div>
+    </div>
+
+
+    <footer id="footer" class="bg-black py-6 md:py-8 text-center">
+        <div class="text-white text-sm md:text-base font-semibold">© Maison310 2025</div>
+        <div class="my-4 space-x-4 md:space-x-6">
+            <a href="https://www.instagram.com/maison.310/" target="_blank"
+                class="text-white hover:text-red-900 transition-colors text-sm md:text-base font-medium">Instagram</a>
+            <a href="https://tiktok.com" target="_blank"
+                class="text-white hover:text-red-900 transition-colors text-sm md:text-base font-medium">TikTok</a>
+            <a href="https://www.youtube.com/@Hermanitoalaprod" target="_blank"
+                class="text-white hover:text-red-900 transition-colors text-sm md:text-base font-medium">YouTube</a>
+        </div>
+        <div class="mt-4">
+            <img src="/assets/img/310.png" alt="Logo Maison310" class="h-6 md:h-8 inline-block">
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+
+
+
+</body>
+
+</html>

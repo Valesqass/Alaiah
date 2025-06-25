@@ -286,3 +286,179 @@ header img {
     width: 100%;
     height: auto;
 }
+
+
+   .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.3);
+        }
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img,
+        .gallery-item:hover video {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(220, 38, 38, 0.8), rgba(0, 0, 0, 0.6));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            grid-template-rows: 300px 200px 300px;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .item-1 {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .item-2 {
+            grid-column: 2;
+            grid-row: 1 / 3;
+        }
+
+        .item-3 {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .item-4 {
+            grid-column: 1;
+            grid-row: 2 / 4;
+        }
+
+        .item-5 {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        .item-6 {
+            grid-column: 3;
+            grid-row: 2 / 4;
+        }
+
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 250px);
+                gap: 1rem;
+            }
+
+            .item-1,
+            .item-2,
+            .item-3,
+            .item-4,
+            .item-5,
+            .item-6 {
+                grid-column: 1;
+                grid-row: auto;
+            }
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(220, 38, 38, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .modal img,
+        .modal video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
