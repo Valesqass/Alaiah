@@ -161,7 +161,7 @@ function openModal(src, type) {
     if (type === 'image') {
         modalContent.innerHTML = `<img src="${src}" alt="Merch Image">`;
     } else if (type === 'video') {
-        modalContent.innerHTML = `<video controls autoplay style="width: 100%; height: auto;"><source src="${src}" type="video/mp4"></video>`;
+        modalContent.innerHTML = `<video controls muted autoplay style="width: 100%; height: auto;"><source src="${src}" type="video/mp4"></video>`;
     }
 
     modal.style.display = 'block';
